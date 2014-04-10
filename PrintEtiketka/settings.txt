@@ -1,0 +1,16 @@
+[COMPORT]
+port = COM1
+speed = CBR_9600
+bits = 7
+chet = NOPARITY
+stopbits = TWOSTOPBITS
+
+[SERVER]
+server_addr = localhost
+login = ivan
+password = coolworld
+
+[PRINTERS]
+printEtik = Zebra  LP2844
+printShtih = UNSBP1_2 Unisystem Thermal Printer
+printZvit = HP LaserJet 1020
