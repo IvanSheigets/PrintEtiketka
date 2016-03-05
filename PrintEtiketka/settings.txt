@@ -6,11 +6,11 @@ chet = NOPARITY
 stopbits = TWOSTOPBITS
 
 [SERVER]
-server_addr = localhost
+server_addr = 192.168.0.9
 login = ivan
 password = coolworld
 
 [PRINTERS]
-printEtik = Zebra  LP2844
+printEtik = SATO CG408 (копия 1)
 printShtih = UNSBP1_2 Unisystem Thermal Printer
 printZvit = HP LaserJet 1020

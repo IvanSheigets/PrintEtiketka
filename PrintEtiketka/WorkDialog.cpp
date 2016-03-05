@@ -1194,7 +1194,7 @@ void CWorkDialog::AddProduct()
 							
 							if (m_strZakazchik.Trim()=="ÀÎ \"ÁÓÊÓÐÈß\" Ã.ÊÈØÈÍÅÂ (ÌÎËÄÎÂÀ)")
 							{
-								Print(&dcPrinter,m_strZakazchik, m_strProduct[m_iNumList],strNetto,strBrytto,strSmena,m_strPartiya,strData);
+								Print(&dcPrinter,m_strZakazchik, m_strProduct[m_iNumList],strNetto,strBrytto,strSmena,m_strPartiya,strData, m_strProductWidth[m_iNumList]);
 
 								csCode.Format("3%d",m_iProductId);
 								
@@ -1411,7 +1411,7 @@ void CWorkDialog::Print (CDC *dc, CString strZakazchik,
 
 
 void CWorkDialog::Print (CDC *dc, CString strZakazchik,CString strTovar, CString strNetto, CString strBrytto,
-						CString strSmena, CString strPartiya, CString strData)//ÁÓêóðèÿ
+						CString strSmena, CString strPartiya, CString strData, CString strWidth)//ÁÓêóðèÿ
 {
 	CFont font;
 	double b=0;
@@ -1472,7 +1472,10 @@ void CWorkDialog::Print (CDC *dc, CString strZakazchik,CString strTovar, CString
 	//t+=3;
 	font.CreateFont(25,0,0,0,FW_NORMAL,FALSE,TRUE,0,ANSI_CHARSET,OUT_DEFAULT_PRECIS,CLIP_DEFAULT_PRECIS,DEFAULT_QUALITY,DEFAULT_PITCH | FF_SWISS,"Times New Roman");
 	dc->SelectObject(&font);
-	dc->TextOut(l+210,t+3,"50 ìì");
+	//dc->TextOut(l+210,t+3,"50 ìì");
+	
+	//dc->TextOut(l+210,t+3,"50 ìì");
+	dc->TextOut(l+210,t+3,strWidth);
 	font.DeleteObject();
 	//
 

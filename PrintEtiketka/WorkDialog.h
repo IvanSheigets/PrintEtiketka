@@ -241,7 +241,7 @@ private:
 	
 	void Print (CDC *dc, CString strZakazchik, CString strTovar, 
 		CString strNetto, CString strBrytto,
-		CString strSmena, CString strPartiya, CString strData);//Букурия
+		CString strSmena, CString strPartiya, CString strData, CString strWidth);//Букурия
 
 	void Print (CDC *dc, CString strZakazchik, 
 		CString strNetto, CString strBrytto,
